@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Freya's web page</title>
+</head>
+<body>
+    <p>Welcome, <b>Freya's </b>web page.</p>
+    <center><img id="picFace" src="https://www.shutterstock.com/shutterstock/photos/787433068/display_1500/stock-photo-funny-halloween-dog-witch-or-wizard-hat-wearing-colored-sunglasses-isolated-787433068.jpg" /></center>
+    <input id="btnPuppy" type="button" value="Large"
+           onclick="btnPuppy_OnClick()" />
+    <input id="btnPuppy2" type="button" value="Small"
+           onclick="btnPuppy2_OnClick()" />
+</body>
+</html>
+
+<script>
+    function btnPuppy_OnClick() {
+        document.title = "Freya";
+        picFace.src = "https://img.freepik.com/free-photo/puppy-that-is-walking-snow_1340-37228.jpg?w=2000";
+    }
+    function btnPuppy2_OnClick() {
+        document.title = "Freya"
+        picFace.src = "https://www.dutch.com/cdn/shop/articles/shutterstock_1290320698.jpg?v=1651099282";
+    }
+</script>

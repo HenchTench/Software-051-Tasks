@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <div>
+        <p><b>Fahrenheit to Celsius converter</b></p>
+        <p>Fahrenheit:</p>
+        <p id="txtFah">0</p>
+    </div>
+    <div>
+        <input type="button" id="btnNegInc" value="-1" onclick="btnNegInc_OnClick()"/>
+        <input type="button" id="btnPosInc" value="+1" onclick="btnPosInc_OnClick()"/>
+    </div>
+        <p>Use the buttons above to alter the reading in Fahrenheit</p>
+        <p>Celsius:</p>
+        <p id="txtCel">-18</p> <!-- The number given here is -18 because that's the celsius reading at 0 fahrenheit-->
+    </div>
+<script>
+
+    function txtCel_Conversion() {
+        var floatTemp = (parseInt(txtFah.textContent) - 32) * 0.5556;
+        txtCel.textContent = parseInt(floatTemp) + " °C";
+        //I'm deliberately rounding up the float for readability, or every number given will be a decimal.
+    }
+
+    function btnNegInc_OnClick() {
+        txtFah.textContent = (parseInt(txtFah.textContent) - 1) + " °F";
+        txtCel_Conversion(); //Here I'm calling the above function, so when you change the display it will put a new number in the celsius field, the same is true below.
+    }
+
+    function btnPosInc_OnClick() {
+        txtFah.textContent = (parseInt(txtFah.textContent) + 1) + " °F" ;
+        txtCel_Conversion();
+    }
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Colour Change Test</title>
+</head>
+<body>
+    <input id="btnRed" type="button" value="Red"
+           onclick="btnRed_OnClick()"
+           onmouseover="btnRed_Mouseover()"
+           onmouseout="btnRed_Mouseout()"
+           />
+    <input id="btnBlue" type="button" value="Blue"
+           onclick="btnBlue_OnClick()" 
+           onmouseover="btnBlue_Mouseover()" 
+           onmouseout="btnBlue_Mouseout()"
+           />
+    
+</body>
+</html>
+
+<script>
+
+    function btnRed_Mouseover() {
+        btnRed.value = "RED";
+    }
+
+    function btnRed_Mouseout() {
+        btnRed.value = "Red";
+    }
+
+    function btnRed_OnClick(){
+    document.bgColor = "red";
+    }
+
+    function btnBlue_OnClick(){
+    document.bgColor = "blue";
+    }
+
+    function btnBlue_Mouseout(){
+    btnBlue.value = "Blue";
+    }
+
+    function btnBlue_Mouseover(){
+    btnBlue.value = "BLUE";
+    }
+</script>

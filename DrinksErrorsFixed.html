@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Drinks Repaired</title>
+</head>
+<body>
+    Bottle Size: <input id="txtBottleSize" type="text" /><br />
+    Quantity: <input id="txtQty" type="text" /><br />
+    Price (£): <input id="txtPrice" type="text" /><br />
+    <input id="btnCalc" type="button" value="Calculate"
+           onclick="btnCalc_onClick()" /><br />
+    £<span id="spnBottlePrice"></span> per bottle<br />
+    £<span id="spnPintPrice"></span> per pint<br />
+</body>
+</html>
+
+<script>
+  function btnCalc_onClick(){
+    spnBottlePrice.innerText = parseInt(txtQty.value) / parseInt(txtPrice.value);
+    spnPintPrice.innerText = parseInt(spnBottlePrice.innerText) * (568 /
+			parseInt(txtBottleSize.value));
+  }
+</script>

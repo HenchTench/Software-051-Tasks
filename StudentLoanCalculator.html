@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Loan Repayment Calculator</title>
+</head>
+<body>
+    <center>
+        <b>Student Loan Repayment Calculator</b><br />
+        <input id="txtIncome" type="text" />
+        <input id="btnCalc" type="button" value="Calculate" onclick="btnCalc_onClick()" />
+        <p id="parPayment"></p>
+    </center>
+</body>
+</html>
+
+<script>
+    function btnCalc_onClick() {
+        parPayment.innerText = (txtIncome.value - 25000) * 0.09;
+    }
+</script>
