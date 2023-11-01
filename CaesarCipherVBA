@@ -1,0 +1,22 @@
+Option Explicit
+
+Sub caesarcipher()
+
+Dim intRow As Integer
+Dim intColumn As Integer
+
+
+For intRow = 1 To 24
+    For intColumn = 1 To 28
+        
+        If Cells(intRow, intColumn) = "z" Then
+            Cells(intRow + 1, intColumn) = "a"
+            Else
+            Cells(intRow + 1, intColumn) = Asc(Cells(intRow, intColumn)) + 1
+            Cells(intRow + 1, intColumn) = Chr(Cells(intRow + 1, intColumn))
+        End If
+    
+    Next
+Next
+
+End Sub
