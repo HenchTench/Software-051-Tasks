@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Number's Game</title>
+</head>
+    <center><p style="font-size:250%;">Number's Game</p></center>
+<div>
+    <p style="font-size:150%;" id="txtIntro">Below you will find a box to insert the highest possible number that your guess can be during the course of the game.</p>
+</div>
+    <center>
+    <input id="txtUpperInput" type="text" placeholder="Insert upper limit here." />
+    <input id="btnGenerate" type="button" value="Generate" onclick="GenerateRandomNumber()" />
+    </center>
+<div>
+    <p id="txtOutput">            </p>
+</div>
+    <center>
+    <input id="txtGuessInput" type="text" disabled />
+    <input id="btnGuess" type="button" value="Enter" disabled />
+    </center>
+<div>
+<center>
+<img src="Greyfacesmile.jpg" width="100" height="100" />
+<img src="Greyfacesmile.jpg" width="100" height="100" />
+<img src="Greyfacesmile.jpg" width="100" height="100" />
+<img src="Greyfacesmile.jpg" width="100" height="100" />
+<img src="Greyfacesmile.jpg" width="100" height="100" />
+</center>
+</div>
+<body>
+
+</body>
+</html>
+
+<script>
+    let intMaxNumber
+    let intRandomNumber
+    function GenerateRandomNumber() {
+        intMaxNumber = parseInt(document.getElementById("txtUpperInput").value); //document.getElementByID is required to correctly reference
+        if (MaxNumber > 0) {
+            txtOutput.innerText = Math.floor((Math.random() * intMaxNumber)+1);
+            UIdisableswap();
+        }
+    }
+
+    function UIdisableswap() {
+        document.getElementById("txtGuessInput").disabled = false;
+        document.getElementById("btnGuess").disabled = false;
+        document.getElementById("txtUpperInput").disabled = true;
+        document.getElementById("btnGenerate").disabled = true;
+    }
+
+</script>
+
